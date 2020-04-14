@@ -1,5 +1,5 @@
 class BaseService {
-  constructor({ repository }) {
+  constructor(repository) {
     this.repository = repository;
   }
 
