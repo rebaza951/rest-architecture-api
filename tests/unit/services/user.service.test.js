@@ -20,10 +20,10 @@ describe("User Service", () => {
 
   it("Should find a user by username", async () => {
     const UserRepository = UserRepositoryMock;
-    UserRepository.getUserByUsername.mockReturnValue(user);
+    UserRepository.getUserByUserName.mockReturnValue(user);
 
     const _userService = new UserService({ UserRepository });
-    const expected = await _userService.getUserByUsername(user.username);
+    const expected = await _userService.getUserByUserName(user.username);
     expect(expected).toMatchObject(user);
   });
 
